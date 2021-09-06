@@ -1,0 +1,174 @@
+%% Slides Template - AAU
+\documentclass[pdf,xcolor=table]{beamer}
+
+\usetheme{CambridgeUS}
+
+%% packages
+\usepackage[english]{babel}
+\usepackage{url,graphicx,indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{hhline}
+\usepackage{adjustbox}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{color, colortbl}
+\usepackage{booktabs,siunitx}
+\usepackage{tikz}
+\usepackage{caption}
+
+%% tikzlib
+\usetikzlibrary{arrows,positioning,automata,shadows,fit,shapes,calc}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{decorations.text, shapes.misc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{fit,calc}
+\newcommand{\tikzmark}[1]{
+\tikz[overlay ,remember  picture ,baseline] \node [anchor=base] (#1)  {};}
+
+%% set template and colors
+\definecolor{aauBlue}{RGB}{85,158,195}
+\definecolor{aauBlue2}{RGB}{67,111,129}
+\definecolor{mygreen}{RGB}{193,255,193}
+\setbeamercolor{title}{bg=aauBlue2,fg=white}
+\setbeamercolor{block title}{bg=white!94!black,fg=aauBlue2}
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,sep=8pt,center,shadow=true]
+\setbeamertemplate{theorems}[numbered]
+\setbeamerfont{bibliography item}{size=\footnotesize}
+\setbeamerfont{bibliography entry author}{size=\footnotesize}
+\setbeamerfont{bibliography entry title}{size=\footnotesize}
+\setbeamerfont{bibliography entry location}{size=\footnotesize}
+\setbeamerfont{bibliography entry note}{size=\footnotesize}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamercolor{palette primary}{bg=white!94!black,fg=aauBlue2}
+\setbeamercolor{palette secondary}{bg=aauBlue2!70,fg=white}
+\setbeamercolor{palette tertiary}{bg=aauBlue2,fg=white}
+\setbeamercolor{frametitle}{bg=white!94!black,fg=aauBlue2}
+\setbeamercolor*{item}{fg=aauBlue2,bg=white}
+\setbeamertemplate{section in toc}[circle]
+\setbeamerfont{section in toc}{size=\Large}
+\setbeamerfont{subsection in toc}{size=\large}
+\setbeamertemplate{subsection in toc}
+{\leavevmode\leftskip=2em$\bullet$\hskip1em\inserttocsubsection\par}
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
+\setbeamertemplate{enumerate item}[circle]
+\setbeamertemplate{enumerate subitem}[circle]
+\setbeamertemplate{enumerate subsubitem}[circle]
+\setbeamertemplate{itemize subitem}{$\rightarrow$}
+\setbeamerfont{section number projected}{%
+  family=\rmfamily,series=\bfseries,size=\Large}
+
+\definecolor{ao}{rgb}{0.0, 0.5, 0.0}
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+\beamertemplatenavigationsymbolsempty
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\newcolumntype{*}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[PreviewTitle]{Extendend Title }
+\author[First, Second]{\underline{First Author}, Second Author}
+\institute[AAU]{Alpen-Adria-Universität Klagenfurt}
+\date{\today}
+%%%
+
+\AtBeginSection[]{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{AAULogo2.jpg}}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+\usebackgroundtemplate{}
+}
+
+
+\begin{document}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{AAULogo2.jpg}}
+\maketitle
+\usebackgroundtemplate{}
+
+\begin{frame}
+\frametitle{Overview}
+\hfill
+\parbox[t]{.96\textwidth}{
+  \begin{minipage}[c][0.65\textheight]{\textwidth}
+  \tableofcontents
+  \end{minipage}
+}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% First Section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{First Section}
+\begin{frame}{Frame Title}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Second Section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Second Section}
+\begin{frame}{Frame Title}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Third Section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Third Section}
+\begin{frame}{Frame Title}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fourth Section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fourth Section}
+\begin{frame}{Frame Title}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{}
+\begin{frame}[t,allowframebreaks]
+        \frametitle{Bibliography}
+        \bibliographystyle{plain}
+        \bibliography{mybib}
+\end{frame}
+\end{document}
